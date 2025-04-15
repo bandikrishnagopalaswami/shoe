@@ -1,0 +1,56 @@
+body{
+  background-color: rgba(54, 96, 234, 0.3);
+  font-family:Montserrat;
+}
+.shoe{
+  margin-top:20px;
+  margin-left:15px;
+}
+.price,.model{
+  margin:2px 0px 5px 100px;
+}
+.model{
+  margin-left:60px;
+}
+.h1-nike,.h1-asian{
+  margin:5px;
+  color:brown;
+}
+.nike-shoe-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fill,minmax(235px,1fr));
+  column-gap: 20px;
+  row-gap:20px;
+}
+.shoe-specifications{
+  padding:15px 0px 15px 0px;
+  width:90%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  transition: 0.20s;
+}
+.shoe-specifications:hover{
+  padding:25px 5px 25px 5px;
+}
+.shoe-img{
+  width:80%;
+  border-radius: 5px;
+  margin-left:24px;
+}
+.add-to-cart{
+  margin-left:25px;
+  margin-top: 10px;
+  font-size:15px;
+  background-color: rgb(238, 238, 18);
+  padding:7px 65px 7px 65px;
+  border-radius: 20px;
+  border-width:1px;
+  transition: 0.20s;
+}
+.add-to-cart:hover{
+  opacity: 0.8;
+}
+.add-to-cart:active{
+  opacity: 0.5;
+}
