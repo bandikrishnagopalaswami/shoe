@@ -37,7 +37,7 @@ body{
   border-style: solid;
   border-radius: 10px;
   border-width: 1px;
-  transition: 0.30s;
+  transition:padding 0.30s;
 }
 .shoe-specifications:hover{
   padding:20px 5px 10px 5px;
