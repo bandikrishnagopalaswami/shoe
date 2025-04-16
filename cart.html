@@ -64,7 +64,9 @@
     console.log(localStorage.getItem(String(x)));
     boolean_idx_verify[x-1]=false;
     console.log(x,boolean_idx_verify);
-    location.reload(); 
+    setTimeout(function(){
+      location.reload(); 
+    }, 200)
   }
   let total_price=document.querySelector(".total");
   total_price.innerHTML=`Total:${total}`;

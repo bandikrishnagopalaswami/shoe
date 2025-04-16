@@ -3,6 +3,14 @@ body{
   font-family:Montserrat;
   margin-bottom: 100px;
 }
+.added-symbol{
+  color:white;
+  background-color: rgb(15, 178, 15);
+  padding: 3px 5px 4px 5px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight:bold;
+}
 .shoe{
   margin-top:20px;
   margin-left:15px;
@@ -24,20 +32,20 @@ body{
   row-gap:20px;
 }
 .shoe-specifications{
-  padding:15px 0px 15px 0px;
+  padding:15px 0px 0px 0px;
   width:90%;
   border-style: solid;
   border-radius: 10px;
   border-width: 1px;
-  transition: 0.20s;
+  transition: 0.30s;
 }
 .shoe-specifications:hover{
-  padding:25px 5px 25px 5px;
+  padding:20px 5px 10px 5px;
 }
 .shoe-img{
   width:80%;
   border-radius: 5px;
-  margin-left:24px;
+  margin-left:27px;
 }
 .add-to-cart{
   margin-left:25px;
