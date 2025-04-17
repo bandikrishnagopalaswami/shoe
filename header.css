@@ -1,71 +1,61 @@
 header{
-  color:brown;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  border-style: solid;
-  border-width:1px;
-  border-color:black ;
-  padding:10px;
+  background-color: rgb(247, 255, 22);
+  color:brown;
+  padding:15px 15px 15px 25px;
   border-radius: 5px;
-  background-color: rgba(237, 237, 42,0.7);
   align-items: center;
-  justify-content:space-between;
-  min-width: fit-content;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: black;
+  border-width:1px;
 }
-.h1-header{
-  margin:0px
-}
-.company-name{
-  max-width:fit-content;
-  margin-right: 50px;
+.company_name,.cart_page{
+  width:fit-content;
+  border-style: none;
 }
 .search_item{
-  flex:1;
-  display: flex;
+  display:flex;
   flex-direction: row;
-  padding:6px 0px 6px 5px;
+  flex:0.6;
   align-items: center;
+  border-style: none;
 }
-.cart{
-  margin-left:50px;
-  margin-right: 50px;
+.search_icon{
+  width:30px;
 }
-.input_item_name{
-  padding:8px 10px 8px 10px;
-  font-size: 15px;
-  border-top-left-radius: 10px;
-  border-top-style: solid;
-  border-bottom-style:solid ;
-  border-left-style:solid;
-  border-right-style: none;
+.search_bar{
+  border-style:solid;
   border-width: 1px;
-  width: 100%;
-  border-bottom-left-radius:10px;
-}
-.search-box{
-  flex:0.7;
-}
-.search-icon-div{
-  width:fit-content;
-  background-color: none;
-}
-.search-icon{
-  margin-top: 3px;
-  width: 30px;
-  border-style: solid;
-  padding: 1.7px 0px 1.8px 0px;
-  border-color: black;
+  margin-left:0px;
+  padding:3px 3px 1.5px 3px;
   background-color: white;
-  border-width: 1px;
-  margin-left: 20px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  transition: opacity 0.2s;
 }
-.search-icon:hover{
-  background-color: rgba(128, 128, 128,0.8);
-}
-.search-icon:active{
+.search_bar:hover{
   background-color: grey;
+}
+.search_bar:active{
+  background-color: rgba(128,128,128,0.5);
+}
+.shoe_name,.cart_page{
+  margin:0px;
+}
+.search_text{
+  width: 100%;
+  border-style:none;
+}
+.user_search{
+  width: 97%;
+  padding: 10px 0px 10px 20px;
+  font-size: 16px;
+  border-width: 1px;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.user_name{
+  margin:0px;
 }

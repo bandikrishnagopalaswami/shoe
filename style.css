@@ -1,65 +1,70 @@
 body{
-  background-color: rgba(54, 96, 234, 0.3);
-  font-family:Montserrat;
   margin-bottom: 100px;
+  background-color: rgba(54, 96, 234, 0.3);
+  font-family: montserrat;
 }
-.added-symbol{
-  color:white;
-  background-color: rgb(15, 178, 15);
-  padding: 3px 5px 4px 5px;
-  border-radius: 30px;
-  font-size: 15px;
-  font-weight:bold;
-}
-.shoe{
-  margin-top:20px;
-  margin-left:15px;
-}
-.price,.model{
-  margin:2px 0px 5px 100px;
-}
-.model{
-  margin-left:60px;
-}
-.h1-nike,.h1-asian{
-  margin:5px;
-  color:brown;
-}
-.nike-shoe-container{
+.asian-shoe,.nike-shoe{
   display: grid;
-  grid-template-columns:repeat(auto-fill,minmax(235px,1fr));
-  column-gap: 20px;
-  row-gap:20px;
+  grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+  column-gap: 30px;
+  row-gap:30px;
+  padding: 10px 5px 15px 5px;
 }
-.shoe-specifications{
-  padding:15px 0px 0px 0px;
-  width:90%;
-  border-style: solid;
-  border-radius: 10px;
-  border-width: 1px;
-  transition:padding 0.30s;
-}
-.shoe-specifications:hover{
-  padding:20px 5px 10px 5px;
+.product-added{
+  color:rgb(13, 162, 72);
+  margin:2px 0px 0px 25px;
+  font-weight: bold;
 }
 .shoe-img{
   width:80%;
+  border-width:1px;
+  margin-left:15px;
   border-radius: 5px;
-  margin-left:27px;
+}
+.tick-mark{
+  border-style:none;
+  border-radius: 15px;
+  padding:3px 4px 3px 4px;
+  border-width:1px;
+  color:white;
+  background-color: green;
+  font-size: 12px;
+  margin-right:3px;
+}
+.asian-title,.nike-title{
+  color:brown;
+}
+.shoe-prop{
+  width:90%;
+  border-width:1px;
+  border-radius:10px;
+  padding: 18px 0px 10px 20px;
+  border-style:solid;
+  transition:width 0.3s;
+}
+.shoe-prop:hover{
+  width:93%;
+  padding-bottom: 15px;
+}
+.shoe-name,.shoe-price{
+  margin:2px 0px 3px 50px;
+}
+.shoe-price{
+  margin-left:75px;
 }
 .add-to-cart{
-  margin-left:25px;
-  margin-top: 10px;
-  font-size:15px;
-  background-color: rgb(238, 238, 18);
-  padding:7px 65px 7px 65px;
-  border-radius: 20px;
-  border-width:1px;
-  transition: 0.20s;
+margin-left:10px;
+margin-top: 3px;
+font-size:15px;
+background-color: rgb(238, 238, 18);
+padding:7px 65px 7px 65px;
+border-radius: 20px;
+border-width:1px;
+transition: 0.20s;
 }
 .add-to-cart:hover{
-  opacity: 0.8;
+opacity: 0.8;
 }
 .add-to-cart:active{
-  opacity: 0.5;
+opacity: 0.5;
 }

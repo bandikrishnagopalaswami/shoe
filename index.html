@@ -3,140 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap" rel="stylesheet">  
-<link rel="stylesheet" href="header.css">
-<link rel="stylesheet" href="style.css">
-  <title>Shoe Store</title>
+  <title>Document</title>
+  <script src="login.js"></script>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  <header>
-    <div class="company-name">
-      <h1 class="h1-header">SHOE STORE</h1>
-    </div>
-    <div class="search_item">
-      <div class="search-box">
-        <input class="input_item_name"type="text" placeholder="Search">
-      </div> 
-      <div class="search-icon-div">
-        <img class="search-icon" onclick="search_item()"src="search.svg">
-      </div>
-    </div>
-    <div class="cart">
-      <h1 class="h1-header"><a href="cart.html">CART</a></h1>
-    </div>
-  </header>
-  <section class="shoe">
-    <h1 class="h1-asian">ASIAN SHOES</h1>
-    <div class="nike-shoe-container">
-      <div class="shoe-specifications">
-        <img class='shoe-img'src="1.jpeg">
-        <p class="model">Campus Oxyfit </p>
-        <p class="price">10,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(1)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="2.jpeg">
-        <p class="model">Sparx SM-482</p>
-        <p class="price">12,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(2)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="3.jpeg">
-        <p class="model">SWIB R-001 </p>
-        <p class="price">15,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(3)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="4.jpeg">
-        <p class="model">Red Tape RTK0035</p>
-        <p class="price">19,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(4)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="5.jpeg">
-        <p class="model">Pan Super Sonic 3</p>
-        <p class="price">10,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(5)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-    </div>
-  </section>
-  <section class="shoe">
-    <h1 class="h1-nike">NIKE SHOES</h1>
-    <div class="nike-shoe-container">
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="6.jpeg">
-        <p class="model">Nike InfinityRN 4 </p>
-        <p class="price">20,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(6)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img'src="7.jpeg">
-        <p class="model">Nike Free RN 4.0</p>
-        <p class="price">18,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(7)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img'src="8.jpeg">
-        <p class="model">Nike Dunk Low </p>
-        <p class="price">16,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(8)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="9.jpeg">
-        <p class="model">Nike Air Force 1</p>
-        <p class="price">14,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(9)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-      <div class="shoe-specifications">
-        <img class='shoe-img' src="10.jpeg">
-        <p class="model">Nike Air Max 97</p>
-        <p class="price">10,000/-</p>
-        <button class="add-to-cart" onclick="add_to_cart(10)">Add to cart</button>
-        <p class="added-to-cart"></p>
-      </div>
-    </div>
-  </section>
+ <center>
+  <div class="user-details">
+    <h1 class="login-heading">Login</h1>
+    <input class="username"type="text" placeholder="Username">
+    <input class="password"type="password" placeholder="Password">
+    <button onclick="ui_final()"class="login">Login</button>
+    <p class="new-user">New user?</p>
+    <button class="register" onclick="register()">Register here</button>
+  </div>
+ </center>
 </body>
 <script>
-  const product_details={
-    product_images:['1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg','6.jpeg','7.jpeg','8.jpeg','9.jpeg','10.jpeg'],
-    product_names:['Campus Oxyfit','Sparx SM-482','SWIB R-001','Red Tape RTK0035','Pan Super Sonic 3','Nike InfinityRN 4','Nike Free RN 4.0','Nike Dunk Low','Nike Air Force 1','Nike Air Max 97'],
-    product_prices:[10000,12000,15000,19000,10000,20000,18000,16000,14000,10000],
-    product_quantity: [0,0,0,0,0,0,0,0,0,0],
-    product_index:[1,2,3,4,5,6,7,8,9,10]
-  }
-  function add_to_cart(x){
-    product_details.product_quantity[x-1]++;
-    let update_for_user=document.querySelectorAll(".added-to-cart");
-    update_for_user[x-1].innerHTML='<span class="added-symbol">&#10003</span> Added';
-    update_for_user[x-1].style.color='rgb(15, 178, 15)';
-    update_for_user[x-1].style.fontWeight='600';
-    update_for_user[x-1].style.margin='5px 0px 0px 45px';
-    setTimeout(function(){
-      update_for_user[x-1].innerHTML='';
-      }, 1000)
-    //update_for_user[x-1].innerHTML='';
-    localStorage.setItem(String(product_details.product_index[x-1]),JSON.stringify([product_details.product_names[x-1],product_details.product_images[x-1],product_details.product_prices[x-1],product_details.product_quantity[x-1],
-    product_details.product_index[x-1]]
-    ));
-    console.log(x,JSON.parse(localStorage.getItem(String(product_details.product_index[x-1]))));
-    // console.log(product_details.product_quantity[x-1],product_details.product_images[x-1],product_details.product_names[x-1],product_details.product_prices[x-1]);
-   // localStorage.clear();
-  }
-  function search_item(){
-    let user_search_item=document.querySelector(".input_item_name");
-  }
+  localStorage.setItem("quantity",JSON.stringify([0,0,0,0,0,0,0,0,0,0]));
 </script>
 </html>

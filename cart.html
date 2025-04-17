@@ -4,28 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="cart.css">
+  <script src="cart.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Underdog&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="company-name">
-      <h1 class="h1-header">SHOE STORE</h1>
+    <div class="company_name">
+      <h1 class="shoe_name">SHOE STORE</h1>
     </div>
     <div class="search_item">
-      <div class="search-box">
-        <input class="input_item_name"type="text" placeholder="Search">
+      <div class="search_text">
+        <input class="user_search" type="text" placeholder="Search">
       </div>
-      <div class="search-icon-div">
-        <img class="search-icon"src="search.svg">
+      <div class="search_bar">
+        <img class="search_icon" src="search.svg">
       </div>
+    </div>
+    <div class="user">
+      <h3 class="user_name"></h3>
     </div>
     <div class="cart">
-      <h1 class="h1-header"><a href="index.html">HOME</a></h1>
-    </div>
+      <h1 class="cart_page"><a href="index1.html">HOME</a></h1>
   </header>
   <div class="cart_products">
   </div>
@@ -33,42 +35,23 @@
 </body>
 <script>
   let total=0;
-  let boolean_idx_verify=[false,false,false,false,false,false,false,false,false,false];
-  for(let i=0;i<=9;i++){
-    if(localStorage.getItem(String(i+1))!==null){
-      boolean_idx_verify[i]=true;
-      console.log(boolean_idx_verify[i],i+1);
+  let username=document.querySelector(".user_name");
+let users=JSON.parse(localStorage.getItem("users"));
+username.innerHTML=`${users.toUpperCase()}`;
+  let user_name=JSON.parse(localStorage.getItem("users"));
+  let user_details=JSON.parse(localStorage.getItem(user_name));
+  console.log(user_details);
+  let update_cart=document.querySelector(".cart_products");
+  let user_product_quantity=JSON.parse(localStorage.getItem("quantity"));
+  for(let i=0;i<10;i++){
+    if(user_details[5][i]>0){
+      let shoe_in_cart=document.createElement("div");
+    shoe_in_cart.innerHTML=`<img class="shoe-img"src=${user_details[2][i]}><p class="shoe-name">${user_details[3][i]}</p><p class="shoe-price">${user_details[4][i]}</p><p class="quantity">Quantity:${user_details[5][i]}</p><button onclick="update(${i})" class="delete">Delete</button>`;
+      total+=Number(user_details[5][i])*Number(user_details[4][i]);
+      shoe_in_cart.classList.add("shoe-prop");
+      update_cart.appendChild(shoe_in_cart);
     }
   }
-  console.log(boolean_idx_verify);
-  let cart_items=document.querySelector(".cart_products");
-  for(let i=9;i>=0;i--){
-    if(boolean_idx_verify[i]===true){
-      let new_item=document.createElement("div");
-      let a=JSON.parse(localStorage.getItem(String(i+1)));
-      console.log(a);
-      let res=a[0];
-      new_item.innerHTML=`<img class="shoe-img"src='${a[1]}'><pre>      ${a[0]}<br>          ${a[2]}/-<br><button class="remove-from-cart" onclick="remove_product(${a[4]})">Remove from cart</button></pre>`;
-      total+=a[2];
-      new_item.style.border=`solid`;
-      new_item.style.borderWidth=`1px`;
-      new_item.style.padding='15px 5px 15px 5px';
-      new_item.style.borderRadius='10px';
-      new_item.style.fontSize='15px';
-      new_item.classList.add('cart-elements');
-      cart_items.appendChild(new_item);
-    }
-  }
-  function remove_product(x){
-     localStorage.removeItem(String(x));
-    console.log(localStorage.getItem(String(x)));
-    boolean_idx_verify[x-1]=false;
-    console.log(x,boolean_idx_verify);
-    setTimeout(function(){
-      location.reload(); 
-    }, 200)
-  }
-  let total_price=document.querySelector(".total");
-  total_price.innerHTML=`Total:${total}`;
+  document.querySelector(".total").innerHTML=`Total:${total}`;
 </script>
 </html>
