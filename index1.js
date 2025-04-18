@@ -32,3 +32,24 @@ function add_to_cart(x){
     localStorage.setItem(user_details[0],JSON.stringify(user_details));
     console.log(JSON.stringify((localStorage.getItem(user_name))));
 }
+function search(){
+  let user_entered_input=document.querySelector(".user_search").value;
+  user_entered_input=user_entered_input.toLowerCase();
+  let available=false;
+  for(let i=0;i<10;i++){
+    let x=user_product_names[i].toLowerCase();
+    if(x===user_entered_input){
+      available=true;
+      break;
+    }
+  }
+  if(available===true){
+    alert('product available')
+  }
+  else{
+    alert('product not available')
+  }
+  setTimeout(function(){
+    user_entered_input.innerHTML='';
+  }, 1100);
+}
