@@ -42,7 +42,6 @@ username.innerHTML=`${users.toUpperCase()}`;
   let user_details=JSON.parse(localStorage.getItem(user_name));
   console.log(user_details);
   let update_cart=document.querySelector(".cart_products");
-  let user_product_quantity=JSON.parse(localStorage.getItem("quantity"));
   for(let i=0;i<10;i++){
     if(user_details[5][i]>0){
       let shoe_in_cart=document.createElement("div");
