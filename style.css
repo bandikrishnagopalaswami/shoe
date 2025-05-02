@@ -21,16 +21,6 @@ body{
   margin-left:15px;
   border-radius: 5px;
 }
-.tick-mark{
-  border-style:none;
-  border-radius: 15px;
-  padding:3px 4px 3px 4px;
-  border-width:1px;
-  color:white;
-  background-color: green;
-  font-size: 12px;
-  margin-right:3px;
-}
 .asian-title,.nike-title{
   color:brown;
 }
@@ -42,29 +32,26 @@ body{
   border-style:solid;
   transition:width 0.3s;
 }
-.shoe-prop:hover{
-  width:93%;
-  padding-bottom: 15px;
-}
 .shoe-name,.shoe-price{
   margin:2px 0px 3px 50px;
 }
 .shoe-price{
   margin-left:75px;
 }
-.add-to-cart{
-margin-left:10px;
-margin-top: 3px;
-font-size:15px;
-background-color: rgb(238, 238, 18);
-padding:7px 65px 7px 65px;
-border-radius: 20px;
-border-width:1px;
-transition: 0.20s;
-}
-.add-to-cart:hover{
+.product-info:hover{
 opacity: 0.8;
 }
-.add-to-cart:active{
+.product-info:active{
 opacity: 0.5;
+}
+.product-info{
+  background-color: black;
+  color:white;
+  padding:7px 65px 7px 58px;
+  border-style: none;
+  margin-left: 10px;
+  margin-top:8px;
+  font-size: 15px;
+  border-radius: 15px;
+  transition: 0.20s opacity;
 }

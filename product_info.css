@@ -1,0 +1,72 @@
+.added{
+  color:rgb(13, 162, 72);
+  margin:10px 0px 0px 0px;
+  font-weight: bold;
+}
+body{
+  margin-bottom: 100px;
+  background-color: rgba(54, 96, 234, 0.3);
+  font-family: montserrat;
+  }
+.tick-mark{
+  border-style:none;
+  border-radius: 15px;
+  padding:5px 8px 5px 8px;
+  border-width:1px;
+  color:white;
+  background-color: green;
+  font-size: 12px;
+  margin-right:3px;
+}
+.shoe-size{
+  display:block;
+  width: 40px;
+}
+.product{
+  display:grid;
+  grid-template-columns: 300px 400px;
+  border-style:solid;
+  padding: 30px 30px 70px 20px;
+  max-width:fit-content;
+  position: relative;
+  top:30px;
+  left:50px;
+  border-width:1px;
+  border-radius: 5px;
+}
+.product-desc-img{
+  width:90%;
+}
+.product-infor{
+  width:90%;
+}
+.product-price{
+  margin-left: 80px;
+}
+
+.display_img{
+  margin-top: 20px;
+  margin-left: 30px;
+  width:70%;
+  border-radius: 10px;
+  transition:0.20s width;
+}
+h4{
+  margin-bottom:3px;
+}
+.add-to-cart{
+  margin-top: 20px;
+  display:block;
+  font-size:18px;
+  background-color: rgb(42, 42, 40);
+  padding:13px 60px 13px 60px;
+  border-radius: 10px;
+  border-width:1px;
+  color:white;
+  }
+  .add-to-cart:hover{
+  opacity: 0.9;
+  }
+  .add-to-cart:active{
+  opacity: 0.5;
+  }

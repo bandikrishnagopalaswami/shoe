@@ -4,6 +4,11 @@ function update(index){
   let user_details=JSON.parse(localStorage.getItem(user_name));
   let user_product_quantity=user_details[5];
   user_product_quantity[index]--;
+  if(user_product_quantity[index]===0){
+    user_details[2][index]='';
+    user_details[3][index]='';
+    user_details[4][index]=0;
+  }
   user_details[5]=user_product_quantity;
   localStorage.setItem(user_details[0],JSON.stringify(user_details));
   setTimeout(function(){
