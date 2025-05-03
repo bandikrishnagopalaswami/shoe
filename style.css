@@ -53,5 +53,6 @@ opacity: 0.5;
   margin-top:8px;
   font-size: 15px;
   border-radius: 15px;
+  cursor:pointer;
   transition: 0.20s opacity;
 }

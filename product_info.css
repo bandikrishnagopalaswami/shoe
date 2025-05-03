@@ -41,9 +41,14 @@ body{
   width:90%;
 }
 .product-price{
-  margin-left: 80px;
+  margin-top: 3px;
+  margin-left: 82px;
 }
-
+.product-name{
+  margin-top: 3px;
+  margin-left:65px;
+  margin-bottom: 3px;
+}
 .display_img{
   margin-top: 20px;
   margin-left: 30px;
