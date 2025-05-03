@@ -12,6 +12,7 @@ function update_product(){
     let display_item=document.querySelector(".product");
     let img_item=document.createElement("div");
     img_item.innerHTML=`<img class="display_img" src='${product_details.product_images[r]}'>
+    <p class="product-name">${product_details.product_names[r]}</p>
     <p class="product-price">${product_details.product_prices[r]}/-</p>`;
     img_item.classList.add("product-desc-img")
     display_item.appendChild(img_item);
