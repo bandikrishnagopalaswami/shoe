@@ -26,6 +26,16 @@ function home_page(){
   let users=JSON.parse(localStorage.getItem("users"));
   username.innerHTML=`${users.toUpperCase()}`;
 }
+function cart(){
+  setTimeout(function(){
+    }, 1100);
+  window.location.href="cart.html";
+}
+function logout(){
+  setTimeout(function(){
+  }, 1100);
+  window.location.href="index.html";
+}
 function search(){
   let user_entered_input=document.querySelector(".user_search").value;
   user_entered_input=user_entered_input.toLowerCase();

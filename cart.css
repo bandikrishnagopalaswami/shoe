@@ -1,16 +1,4 @@
-header{
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(247, 255, 22);
-  color:brown;
-  padding:15px 15px 15px 25px;
-  border-radius: 5px;
-  align-items: center;
-  justify-content: space-between;
-  border-style: solid;
-  border-color: black;
-  border-width:1px;
-}
+
 body{
   background-color: rgba(54, 96, 234, 0.3);
 }
@@ -59,52 +47,4 @@ margin:2px 0px 3px 40px;
 }
 .shoe-price{
 margin-left:40px;
-}
-.company_name,.cart_page{
-  width:fit-content;
-  border-style: none;
-}
-.search_item{
-  display:flex;
-  flex-direction: row;
-  flex:0.6;
-  align-items: center;
-  border-style: none;
-}
-.search_icon{
-  width:30px;
-}
-.search_bar{
-  border-style:solid;
-  border-width: 1px;
-  margin-left:0px;
-  padding:3px 3px 1.5px 3px;
-  background-color: white;
-}
-.search_bar:hover{
-  background-color: grey;
-}
-.search_bar:active{
-  background-color: rgba(128,128,128,0.5);
-}
-.shoe_name,.cart_page{
-  margin:0px;
-}
-.search_text{
-  width: 100%;
-  border-style:none;
-}
-.user_search{
-  width: 97%;
-  padding: 10px 0px 10px 20px;
-  font-size: 16px;
-  border-width: 1px;
-  border-top-style: solid;
-  border-left-style: solid;
-  border-bottom-style: solid;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.user_name{
-  margin:0px;
 }

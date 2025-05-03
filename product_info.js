@@ -25,6 +25,16 @@ function update_product(){
     console.log(user_details);
     console.log(users);
 }
+function cart(){
+  setTimeout(function(){
+    }, 1100);
+  window.location.href="cart.html";
+}
+function home(){
+  setTimeout(function(){
+    }, 1100);
+  window.location.href="home.html";
+}
 function add_to_cart(product_index){
   console.log(document.querySelector(".shoe-size"));
   document.querySelector(".added").innerHTML=`<span class="tick-mark">&#10003;</span>Added`;

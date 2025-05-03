@@ -15,6 +15,11 @@ function update(index){
     location.reload()
   }, 200);
 }
+function home(){
+  setTimeout(function(){
+  }, 1100);
+  window.location.href="index1.html";
+}
 function search(){
   let user_entered_input=document.querySelector(".user_search").value;
   user_entered_input=user_entered_input.toLowerCase();
