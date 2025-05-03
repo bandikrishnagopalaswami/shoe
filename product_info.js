@@ -33,7 +33,7 @@ function cart(){
 function home(){
   setTimeout(function(){
     }, 1100);
-  window.location.href="home.html";
+  window.location.href="index1.html";
 }
 function add_to_cart(product_index){
   console.log(document.querySelector(".shoe-size"));
