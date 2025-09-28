@@ -82,9 +82,11 @@ function similar_products(r){
     y=9;
   }
   for(let i=x;i<=y;i++){
-    const shoe=document.createElement("div");
+    if(i!=r){
+      const shoe=document.createElement("div");
     shoe.innerHTML=`<img class="shoe-img" src="${product_details.product_images[i]}"><p class="shoe-name">${product_details.product_names[i]}</p><p class="shoe-price">${product_details.product_prices[i]}/-</p><button class="product-info"onclick="product_info(${i})">Product info</button>`;
     shoe.classList.add("shoe-prop");
     similarshoes.appendChild(shoe);
+    }
   } 
 }
