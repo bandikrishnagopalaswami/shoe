@@ -1,69 +1,74 @@
-header{
+/* Header Navbar - Slim Version */
+header {
   display: flex;
-  flex-direction: row;
-  background-color: rgb(247, 255, 22);
-  color:brown;
-  padding:15px 15px 15px 25px;
-  border-radius: 5px;
   align-items: center;
   justify-content: space-between;
-  border-style: solid;
-  border-color: black;
-  border-width:1px;
+  background-color: #ffffff;
+  color: #2563eb;
+  padding: 8px 20px;  /* reduced padding */
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 55px; /* fixed height for slim look */
 }
-.company_name,.cart_page{
-  width:fit-content;
-  border-style: none;
-  transition: 0.15s opacity;
-  cursor:pointer; 
+
+/* Company Name */
+.company_name {
+  font-size: 1.3rem; /* smaller font */
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
 }
-.cart_page:active{
-  opacity: 0.5;
+.company_name:hover {
+  color: #1d4ed8;
 }
-.cart_page:hover{
+
+/* Search Section */
+.search_item {
+  display: flex;
+  align-items: center;
+  flex: 0.5;
+  background-color: #f3f4f6;
+  border-radius: 20px;
+  padding: 3px 8px; /* reduced padding */
+}
+
+.user_search {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 6px 8px; /* slimmer input */
+  font-size: 14px;
+  background: transparent;
+  color: #333;
+}
+
+.search_icon {
+  width: 18px;
+  margin-left: 6px;
+  cursor: pointer;
   opacity: 0.7;
 }
-.search_item{
-  display:flex;
-  flex-direction: row;
-  flex:0.6;
-  align-items: center;
-  border-style: none;
+.search_icon:hover {
+  opacity: 1;
 }
-.search_icon{
-  width:30px;
+
+/* Right Side (User + Cart) */
+.user_name {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #374151;
 }
-.search_bar{
-  border-style:solid;
-  border-width: 1px;
-  margin-left:0px;
-  padding:3px 3px 1.5px 3px;
-  background-color: white;
+
+.cart_page {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ef4444;
+  cursor: pointer;
 }
-.search_bar:hover{
-  background-color: grey;
-}
-.search_bar:active{
-  background-color: rgba(128,128,128,0.5);
-}
-.shoe_name,.cart_page{
-  margin:0px;
-}
-.search_text{
-  width: 100%;
-  border-style:none;
-}
-.user_search{
-  width: 97%;
-  padding: 10px 0px 10px 20px;
-  font-size: 16px;
-  border-width: 1px;
-  border-top-style: solid;
-  border-left-style: solid;
-  border-bottom-style: solid;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.user_name{
-  margin:0px;
+.cart_page:hover {
+  color: #dc2626;
 }

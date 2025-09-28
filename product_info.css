@@ -1,77 +1,114 @@
-.added{
-  color:rgb(13, 162, 72);
-  margin:10px 0px 0px 0px;
+/* Success Message */
+.added {
+  color: #16a34a; /* professional green */
+  margin: 10px 0 0 0;
   font-weight: bold;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
 }
-body{
+
+/* Tick Mark */
+.tick-mark {
+  border: none;
+  border-radius: 8px;
+  padding: 4px 6px;
+  color: white;
+  background-color: #16a34a;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+/* Body */
+body {
+  margin: 0;
   margin-bottom: 100px;
-  background-color: rgba(54, 96, 234, 0.3);
-  font-family: montserrat;
-  }
-.tick-mark{
-  border-style:none;
+  background-color: #f9fafb; /* light neutral bg */
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+/* Product Layout */
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* responsive proportion */
+  gap: 30px;
+  background: #ffffff;
+  padding: 25px;
   border-radius: 15px;
-  padding:5px 8px 5px 8px;
-  border-width:1px;
-  color:white;
-  background-color: green;
-  font-size: 12px;
-  margin-right:3px;
+  max-width: 950px;
+  margin: 40px auto; /* center card */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.shoe-size{
-  display:block;
-  width: 40px;
+
+/* Left: Product Image */
+.display_img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin: auto;
+  transition: transform 0.2s ease;
 }
-.product{
-  display:grid;
-  grid-template-columns: 300px 400px;
-  border-style:solid;
-  padding: 30px 30px 70px 20px;
-  max-width:fit-content;
-  position: relative;
-  top:30px;
-  left:50px;
-  border-width:1px;
-  border-radius: 5px;
+.display_img:hover {
+  transform: scale(1.03);
 }
-.product-desc-img{
-  width:90%;
+
+/* Right: Product Information */
+.product-infor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.product-infor{
-  width:90%;
+
+.product-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 5px 0;
 }
-.product-price{
-  margin-top: 3px;
-  margin-left: 82px;
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 5px 0 15px 0;
 }
-.product-name{
-  margin-top: 3px;
-  margin-left:65px;
-  margin-bottom: 3px;
+
+/* Shoe Sizes */
+.shoe-size {
+  display: inline-block;
+  margin: 8px 6px 8px 0;
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f3f4f6;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
-.display_img{
+.shoe-size:hover {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
   margin-top: 20px;
-  margin-left: 30px;
-  width:70%;
-  border-radius: 10px;
-  transition:0.20s width;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  padding: 12px 40px;
+  border-radius: 30px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
-h4{
-  margin-bottom:3px;
+.add-to-cart:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
 }
-.add-to-cart{
-  margin-top: 20px;
-  display:block;
-  font-size:18px;
-  background-color: rgb(42, 42, 40);
-  padding:13px 60px 13px 60px;
-  border-radius: 10px;
-  border-width:1px;
-  color:white;
-  }
-  .add-to-cart:hover{
-  opacity: 0.9;
-  }
-  .add-to-cart:active{
-  opacity: 0.5;
-  }
+.add-to-cart:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
