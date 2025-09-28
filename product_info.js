@@ -9,7 +9,12 @@ const product_details={
   product_quantity: [0,0,0,0,0,0,0,0,0,0],
   product_desc:['Lightweight and flexible, these shoes are perfect for jogging, walking, or gym workouts. They feature breathable mesh uppers with cushioned insoles and anti-skid soles, providing great grip and comfort.','These stylish sneakers come with a synthetic leather finish and durable outer sole. Designed for a trendy urban look, they pair well with casual outfits and offer good foot support for all-day wear.','Designed for comfort and ease, these slip-on shoes are made from soft knit fabric with memory foam cushioning. Lightweight and breathable, they’re ideal for daily errands and long walks.','Rugged and tough, these shoes are built for hiking and trail adventures. With reinforced toe protection, high-traction outsoles, and ankle support, they ensure safety and comfort on rough terrain.','With a sleek synthetic leather design, cushioned footbed, and non-slip sole, these formal shoes offer a smart look and reliable comfort. Ideal for office wear or formal events','A timeless classic in streetwear, the Air Force 1 features a durable leather upper, Nike Air cushioning, and a clean, iconic silhouette. It offers both style and comfort, making it a versatile staple.',"A neutral running shoe with responsive Zoom Air units and a breathable engineered mesh upper. It's designed to deliver cushioning, flexibility, and durability for runners of all levels.","Budget-friendly running shoes with a soft foam midsole, lightweight textile upper, and a simple, clean design. Perfect for beginners or casual fitness enthusiasts.","Originally made for basketball, the Dunk Low has become a fashion icon. Featuring a leather upper and padded collar, it combines retro style with modern comfort."," Designed for basketball players, this model offers full-length Zoom Air cushioning, durable mesh construction, and aggressive traction. It provides support and responssiveness on the court."]
 }
+function product_info(x){
+  localStorage.setItem("product_index",JSON.stringify(x));
+  window.location="product_info.html";
+}
 function update_product(){
+  similar_products(r);
     let display_item=document.querySelector(".product");
     let img_item=document.createElement("div");
     img_item.innerHTML=`<img class="display_img" src='${product_details.product_images[r]}'>
@@ -62,4 +67,24 @@ function add_to_cart(product_index){
   }
   localStorage.setItem(users,JSON.stringify(user_details));
   console.log(JSON.parse(localStorage.getItem(users)));
+}
+function similar_products(r){
+  let similarshoes=document.querySelector(".similar-shoes");
+  console.log(document.querySelector("similar-shoe-title"));
+  let x=-1;
+  let y=-1;
+  if(r<=4){
+    x=0;
+    y=4;
+  }
+  else{
+    x=5;
+    y=9;
+  }
+  for(let i=x;i<=y;i++){
+    const shoe=document.createElement("div");
+    shoe.innerHTML=`<img class="shoe-img" src="${product_details.product_images[i]}"><p class="shoe-name">${product_details.product_names[i]}</p><p class="shoe-price">${product_details.product_prices[i]}/-</p><button class="product-info"onclick="product_info(${i})">Product info</button>`;
+    shoe.classList.add("shoe-prop");
+    similarshoes.appendChild(shoe);
+  } 
 }
