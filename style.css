@@ -7,9 +7,11 @@ body {
   color: #333;
   margin-bottom: 100px;
 }
-
+.recently-viewed-items-button{
+  display: inline;
+}
 /* Section Grid */
-.asian-shoe, .nike-shoe {
+.asian-shoe, .nike-shoe,.recently-viewed-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;

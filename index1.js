@@ -3,12 +3,12 @@ function product_info(x){
   localStorage.setItem("product_index",JSON.stringify(x));
   window.location="product_info.html";
 }
-function home_page(){
-  const product_details={
+const product_details={
     product_images:['1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg','6.jpeg','7.jpeg','8.jpeg','9.jpeg','10.jpeg'],
     product_names:['Campus Oxyfit','Sparx SM-482','SWIB R-001','Red Tape RTK0035','Pan Super Sonic 3','Nike InfinityRN 4','Nike Free RN 4.0','Nike Dunk Low','Nike Air Force 1','Nike Air Max 97'],
     product_prices:[10000,12000,15000,19000,10000,20000,18000,16000,14000,10000],
   }
+function home_page(){
   let asian_shoes=document.querySelector(".asian-shoe");
   let nike_shoes=document.querySelector(".nike-shoe");
   for(let i=0;i<10;i++){
@@ -25,6 +25,20 @@ function home_page(){
   let username=document.querySelector(".user_name");
   let users=JSON.parse(localStorage.getItem("users"));
   username.innerHTML=`${users.toUpperCase()}`;
+}
+function displayRecentlyviewed(){
+   let user_name=JSON.parse(localStorage.getItem("users"));
+  let user_details=JSON.parse(localStorage.getItem(user_name));
+  console.log(user_details);
+  let recentlyViewedItems=document.querySelector(".recently-viewed-items");
+  let recentlyviewedimages=user_details[7];
+  console.log(recentlyviewedimages);
+  for(let i=0;i<recentlyviewedimages.length;i++){
+    const shoe=document.createElement("div");
+    shoe.innerHTML=`<img class="shoe-img" src="${product_details.product_images[recentlyviewedimages[i]]}"><p class="shoe-name">${product_details.product_names[recentlyviewedimages[i]]}</p><p class="shoe-price">${product_details.product_prices[recentlyviewedimages[i]]}/-</p><button class="product-info"onclick="product_info(${recentlyviewedimages[i]})">Product info</button>`;
+    shoe.classList.add("shoe-prop");
+    recentlyViewedItems.appendChild(shoe);
+  }
 }
 function cart(){
   setTimeout(function(){

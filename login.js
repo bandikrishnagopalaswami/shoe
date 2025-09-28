@@ -20,7 +20,7 @@ function ui_final(){
 function user_registration(){
   let user_name=document.querySelector(".username");
   let user_password=document.querySelector(".password");
-  localStorage.setItem(String(user_name.value),JSON.stringify([user_name.value,user_password.value,['','','','','','','','','',''],['','','','','','','','','',''],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],['','','','','','','','','','']]))
+  localStorage.setItem(String(user_name.value),JSON.stringify([user_name.value,user_password.value,['','','','','','','','','',''],['','','','','','','','','',''],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],['','','','','','','','','',''],[]]));
   console.log(localStorage.getItem(String(user_name.value)));
   alert(`Registered successfully`)
   window.location.href="index.html";

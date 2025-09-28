@@ -1,5 +1,6 @@
 let users=JSON.parse(localStorage.getItem("users"));
 let user_details=JSON.parse(localStorage.getItem(users));
+console.log(user_details)
 let r=Number(JSON.parse(localStorage.getItem("product_index")));
 const product_details={
   product_images:['1.jpeg','2.jpeg','3.jpeg','4.jpeg','5.jpeg','6.jpeg','7.jpeg','8.jpeg','9.jpeg','10.jpeg'],
@@ -24,7 +25,14 @@ function update_product(){
     let username=document.querySelector(".user_name");
     username.innerHTML=`${users.toUpperCase()}`;
     console.log(user_details);
-    console.log(users);
+    if(user_details[7].length==5){
+      user_details[7].shift();
+    }
+    if(user_details[7].includes(r)){
+      user_details[7].splice(user_details[7].indexOf(r),1);
+    }
+    console.log(user_details[7].push(r));
+    localStorage.setItem(users,JSON.stringify(user_details));
 }
 function cart(){
   setTimeout(function(){
