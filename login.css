@@ -1,69 +1,57 @@
-.user-details{
-  width:fit-content;
-  padding:30px;
-  border-style:solid;
-  border-width:1px;
-  margin-top:100px;
-  border-radius:10px;
+.user-details {
+    width: fit-content;
+    padding: 30px;
+    border: 1px solid #ccc;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-input{
-  display:block;
-  margin-bottom:10px;
+
+input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.register,.new-user{
-  margin:0px;
-  display: inline-block;
+
+.username, .password {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-.submit{
-  display: block;
+
+.login {
+    background-color: rgb(5, 96, 241);
+    color: white;
+    display: block;
+    padding: 10px 89px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+    cursor: pointer;
 }
-.username,.password{
-  padding:10px;
-  font-size: 16px;
-  border-radius:5px;
-  border-style: 1px;
-  border-width:1px;
+
+.login:hover { opacity: 0.8; }
+.login:active { opacity: 0.5; }
+
+.login-heading { margin: 0; }
+
+.register, .register-user, .login-user {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
 }
-.login{
-  background-color: rgb(5, 96, 241);
-  color:white;
-  display: block;
-  padding:10px 89px 10px 89px;
-  font-size: 16px;
-  border-style: none;
-  border-radius: 5px;
-  transition:opacity 0.30s;
-}
-.login:hover{
-  opacity:0.8;
-}
-.login:active{
-  opacity:0.5;
-}
-.login-heading{
-  margin:0px 0px px 0px;
-}
-.register{
-  margin-left:10px;
-  margin-top:10px;
-  padding:5px 15px 5px 15px;
-  background-color: brown;
-  border-style:none;
-  border-radius:5px;
-  color:white;
-}
-.register-user:hover,.register:hover,.login-user:hover{
-  opacity:0.8;
-}
-.register:active,.register-user:active,.login-user:active{
-  opacity:0.5;
-}
-.register-user,.login-user{
-  margin-left:10px;
-  margin-top:10px;
-  padding:5px 15px 5px 15px;
-  background-color: rgb(5, 96, 241);
-  border-style:none;
-  border-radius:5px;
-  color:white;
-}
+
+.register { background-color: brown; }
+.register-user, .login-user { background-color: rgb(5, 96, 241); }
+
+.register:hover, .register-user:hover, .login-user:hover { opacity: 0.8; }
+.register:active, .register-user:active, .login-user:active { opacity: 0.5; }
